@@ -4,6 +4,7 @@ Java Maven jdk-10 Local Var Demo
 Jdk10支持局部变量类型推导，可以使用`var`来声明一个局部变量。
 
 为了在IDE和build中支持该语法，需要：
+1. 运行时当前java版本需要大约等于`10`
 1. Maven中`maven.compiler.source`至少设置为`10`
 2. IDEA中也有相应设置
 
@@ -13,6 +14,6 @@ Jdk10支持局部变量类型推导，可以使用`var`来声明一个局部变�
 
 
 ```
-mvn clean install
+mvn clean package exec:java -Dexec.mainClass="demo.Hello"
 ```
 
